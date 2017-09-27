@@ -1,0 +1,700 @@
+﻿<!DOCTYPE html>
+<html>
+    <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Claim Status</title>
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+    <link rel="stylesheet" href="Content/css/bootstrap.min.css">
+    <link rel="stylesheet" href="Content/css/style.css">
+    <link rel="stylesheet" href="Content/css/font-awesome.min.css">
+    <link rel="stylesheet" href="Content/css/ionicons.min.css">
+    <link rel="stylesheet" href="Content/css/AdminLTE.min.css">
+    <link rel="stylesheet" href="Content/css/_all-skins.min.css">
+    <link rel="stylesheet" href="Content/css/bootstrap-datepicker.min.css">
+    <link href="Content/css/bootstrap-datetimepicker.min.css" rel="stylesheet" media="screen">
+    <link href="Content/css/bootstrap-datetimepicker.min.css" rel="stylesheet" media="screen">
+    <link rel="stylesheet" href="Content/css/all.css">
+    <link rel="stylesheet" href="Content/flat/_all.css">
+    <link rel="stylesheet" href="Content/flat/flat.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
+    <script type="text/javascript" src="Content/js/jquery-1.8.3.min.js" charset="UTF-8"></script>
+    <script src="Content/js/jquery.min.js"></script>
+    <script src="Content/js/jquery-ui.min.js"></script>
+    <script src="Content/js/bootstrap.min.js"></script>
+    <script src="Content/js/moment.min.js"></script>
+    <script src="Content/js/adminlte.min.js"></script>
+    <script src="Content/js/bootstrap-datepicker.min.js"></script>
+    <script type="text/javascript" src="Content/js/bootstrap-datetimepicker.js" charset="UTF-8"></script>
+	<script type="text/javascript" src="Content/js/locales/bootstrap-datetimepicker.fr.js" charset="UTF-8"></script>
+    <script src="Content/js/icheck.min.js"></script>
+    <script>
+        $(function () {
+			var lastScrollTop = 0;
+			$(window).scroll(function(event){
+			   var st = $(this).scrollTop();
+			   if (st > lastScrollTop){
+				   // downscroll code
+				   $(".floating_block").css('top', 20 + "px");
+			   } else {
+				  // upscroll code
+				  if($(window).scrollTop()==0)
+				  {
+				  	$(".floating_block").css('top', 105 + "px");
+				  }
+			   }
+			   lastScrollTop = st;
+			});
+						
+           	$('#datepicker').datepicker({
+			 autoclose: true
+		    })
+	$('#datepicker1').datepicker({
+			 autoclose: true
+    })
+	    //iCheck for checkbox and radio inputs
+    $('input[type="checkbox"].minimal, input[type="radio"].minimal').iCheck({
+      checkboxClass: 'icheckbox_minimal-blue',
+      radioClass   : 'iradio_minimal-blue'
+    })
+    //Red color scheme for iCheck
+    $('input[type="checkbox"].minimal-red, input[type="radio"].minimal-red').iCheck({
+      checkboxClass: 'icheckbox_minimal-red',
+      radioClass   : 'iradio_minimal-red'
+    })
+    //Flat red color scheme for iCheck
+    $('input[type="checkbox"].flat-red, input[type="radio"].flat-red').iCheck({
+      checkboxClass: 'icheckbox_flat-green',
+      radioClass   : 'iradio_flat-green'
+    }) 
+	$('.form_datetime').datetimepicker({
+        //language:  'fr',
+        weekStart: 1,
+        todayBtn:  1,
+		autoclose: 1,
+		todayHighlight: 1,
+		startView: 2,
+		forceParse: 0,
+        showMeridian: 1
+    });
+        })
+    </script>
+    </head>
+    <body class="hold-transition skin-blue sidebar-mini sidebar-collapse">
+<div class="wrapper">
+<header class="main-header"> 
+      <!-- Logo --> 
+      <a href="index.html" class="logo"> <span class="logo-mini">Claim</span> <span class="logo-lg">Claim Assistance</span> </a> 
+      <!-- Header Navbar: style can be found in header.less -->
+      <nav class="navbar navbar-static-top"> 
+    <!-- Sidebar toggle button--> 
+    <a href="#" class="sidebar-toggle" data-toggle="push-menu" role="button"> <span class="sr-only">Toggle navigation</span> </a>
+    <div class="navbar-custom-menu">
+          <ul class="nav navbar-nav">
+        <li class="dropdown user user-menu"> <a href="#" class="dropdown-toggle" data-toggle="dropdown"> <i class="glyphicon glyphicon-user"></i> <span class="hidden-xs">Amit Kumar</span> </a>
+              <ul class="dropdown-menu">
+            <!-- User image -->
+            <li class="user-footer">
+                  <div class="pull-right"> <a href="login.html"><i class="fa fa-sign-out"></i> Sign out</a> </div>
+                </li>
+          </ul>
+            </li>
+      </ul>
+        </div>
+  </nav>
+    </header>
+
+<aside class="main-sidebar"> 
+      <!-- sidebar: style can be found in sidebar.less -->
+      <section class="sidebar"> 
+    <!-- Sidebar user panel --> 
+    
+    <!-- sidebar menu: : style can be found in sidebar.less -->
+    <ul class="sidebar-menu" data-widget="tree">
+          <li class="active treeview"> <a href="index.html"> <i class="fa fa-home"></i> <span>Home</span> </a> </li>
+          <li class="treeview"> <a href="#"> <i class="fa fa-files-o"></i> <span>Sample 1</span> </a> </li>
+          <li> <a href="#"> <i class="fa fa-th"></i> <span>Sample 2</span> </a> </li>
+        </ul>
+  </section>
+      <!-- /.sidebar --> 
+    </aside>
+
+<div class="content-wrapper"> 
+      <!-- Content Header (Page header) -->
+      <section class="content-header">
+    <h1> Claim Status</h1>
+    <ol class="breadcrumb">
+          <li><a href="index.html"><i class="fa fa-home"></i> Home</a></li>
+          <li class="active">Claim Status</li>
+        </ol>
+  </section>
+      
+      <!-- Main content -->
+      <section class="content"> 
+      <div class="row">
+      <div class="col-md-9 col-xs-12">
+    
+    <div class="box box-default">
+          <div class="box-header with-border">
+          <div class="col-md-4 col-xs-12 data_block">
+         <ul class="list-group list-group-unbordered customer_data">
+                <li class="list-group-item customer_data">
+                  <b>Name</b> <a class="pull-right-data">Rajesh Kumar Singh</a>
+                </li>
+                <li class="list-group-item customer_data">
+                  <b>Customer Type</b> <a class="pull-right-data">Non-PB</a>
+                </li>
+                <li class="list-group-item customer_data">
+                  <b>Insurer</b> <a class="pull-right-data">Bharati Axa</a>
+                </li>
+              </ul>
+              
+              </div>
+              
+                <div class="col-md-4 col-xs-12 data_block">
+        <ul class="list-group list-group-unbordered customer_data">
+                <li class="list-group-item customer_data">
+                  <b>Preferred Mobile</b> <a class="pull-right-data">9866879867</a>
+                </li>
+                <li class="list-group-item customer_data">
+                  <b>Alternate Phone</b> <a class="pull-right-data">9876546543</a>
+                </li>
+                <li class="list-group-item customer_data">
+                  <b>Claim Date</b> <a class="pull-right-data">July 01, 2017</a>
+                </li>
+              </ul>
+        </div>
+           
+	    <div class="col-md-4 col-xs-12 data_block">
+       <ul class="list-group list-group-unbordered customer_data">
+                <li class="list-group-item customer_data">
+                  <b>Email</b> <a class="pull-right-data">sharma@gmail.com</a>
+                </li>
+                <li class="list-group-item customer_data">
+                  <b>Intimate Insurer</b> <a class="pull-right-data">543</a>
+                </li>
+                <li class="list-group-item customer_data">
+                  <b>Damage Level</b> <a class="pull-right-data">InstaClaim</a>
+                </li>
+              </ul>
+        </div>
+              
+        </div></div>
+    
+    
+    
+    
+    <div class="box box-default">
+    <div class="box-header with-border">
+          <h3 class="box-title">Garage Listing</h3>
+          <div class="box-tools">
+          <i class="fa fa-phone-square call_icon" aria-hidden="true"></i>
+        <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+       
+      </div>
+        </div>
+    <!-- /.box-header -->
+    <div class="box-body">
+   
+          <div class="row">
+        <div class="col-md-4 col-sm-6 col-xs-12 form_block">
+              <div class="form-group">
+            <label>Pincode</label>
+            <span class="data_mode"><input type="text" class="form-control" placeholder="Enter Pincode"></span>
+          </div>
+          
+            </div>
+        <div class="col-md-4 col-sm-6 col-xs-12 form_block">
+              <div class="form-group">
+            <label>City</label>
+         <span class="data_mode"> <select class="form-control">
+                    <option>option 1</option>
+                    <option>option 2</option>
+                    <option>option 3</option>
+                    <option>option 4</option>
+                    <option>option 5</option>
+                  </select></span>
+          </div>
+          
+           
+            </div>
+            
+            <div class="col-md-4 col-sm-6 col-xs-12 form_block">
+              <div class="form-group">
+            <label>State</label>
+           <span class="data_mode"> <select class="form-control">
+                    <option>option 1</option>
+                    <option>option 2</option>
+                    <option>option 3</option>
+                    <option>option 4</option>
+                    <option>option 5</option>
+                  </select></span>
+          </div>
+          </div>
+             </div>
+             
+             
+            <table class="table table-bordered">
+                <tr>
+                  <th>Select</th>
+                  <th>Garage Name</th>
+                  <th>Address</th>
+                  <th>City</th>
+                  <th>State</th>
+                  <th>Pincode</th>
+                 
+                </tr>
+                <tr>
+                <td><div class="radio_button">
+                   <label class="radio_btn">
+                <input type="radio" name="r3" class="flat-red" checked>
+                   </label></div></td>
+                 <td>Shiny Carz, Saket</td>
+                  <td>D-24, Ploat-114, Sector-40</td>
+                  <td>Gurugram</td>
+                   <td>Haryana</td>
+                   <td>122001</td>
+                 </tr>
+                   <tr>
+                <td><div class="radio_button">
+                   <label class="radio_btn">
+              <input type="radio" name="r3" class="flat-red" checked>
+                   </label></div></td>
+                 <td>Shiny Carz, Saket</td>
+                  <td>D-24, Ploat-114, Sector-40</td>
+                  <td>Gurugram</td>
+                   <td>Haryana</td>
+                   <td>122001</td>
+                 </tr>
+                   <tr>
+                <td><div class="radio_button">
+                   <label class="radio_btn">
+                  <input type="radio" name="r3" class="flat-red" checked>
+                   </label></div></td>
+                 <td>Shiny Carz, Saket</td>
+                  <td>D-24, Ploat-114, Sector-40</td>
+                  <td>Gurugram</td>
+                   <td>Haryana</td>
+                   <td>122001</td>
+                 </tr>
+                   <tr>
+                <td><div class="radio_button">
+                   <label class="radio_btn">
+                 <input type="radio" name="r3" class="flat-red" checked>
+                   </label></div></td>
+                 <td>Shiny Carz, Saket</td>
+                  <td>D-24, Ploat-114, Sector-40</td>
+                  <td>Gurugram</td>
+                   <td>Haryana</td>
+                   <td>122001</td>
+                 </tr>
+                   <tr>
+                <td><div class="radio_button">
+                   <label class="radio_btn">
+                  <input type="radio" name="r3" class="flat-red" checked>
+                   </label></div></td>
+                 <td>Shiny Carz, Saket</td>
+                  <td>D-24, Ploat-114, Sector-40</td>
+                  <td>Gurugram</td>
+                   <td>Haryana</td>
+                   <td>122001</td>
+                 </tr>
+              </table>
+              <div class="form-group">
+             <label>&nbsp;</label>
+               <p style=" text-align: right;">
+                <a href="javascript:void(0);" class="btn btn-primary submit_nw_btn" role="button">Show Details</a>
+                <a href="javascript:void(0);" class="btn btn-default submit_nw_btn" role="button">Cancel</a>
+            </p>
+             </div>
+        </div>
+        
+          </div>
+    
+    
+    
+       
+        <div class="box box-default">
+    <div class="box-header with-border">
+          <h3 class="box-title">Garage Details</h3>
+          <div class="box-tools">
+          <i class="fa fa-phone-square call_icon" aria-hidden="true"></i>
+        <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+       
+      </div>
+        </div>
+    <!-- /.box-header -->
+    <div class="box-body">
+     <p class="help-block garage_block">Garage Id - <span>GRG1563</span></p>  <p class="help-block garage_blockright">Garage Name - <span>Shiny Carz</span></p>
+          <div class="row">
+        <div class="col-md-3 col-sm-6 col-xs-12 form_block">
+              <div class="form-group">
+            <label>SPOC Name</label>
+           <span class="data_mode"> <input type="text" class="form-control" placeholder="Enter Name"></span>
+          </div>
+            <div class="form-group">
+            <label>Action</label>
+          <span class="data_mode"> <select class="form-control">
+                    <option>option 1</option>
+                    <option>option 2</option>
+                    <option>option 3</option>
+                    <option>option 4</option>
+                    <option>option 5</option>
+                  </select></span>
+          </div>
+            </div>
+        <div class="col-md-3 col-sm-6 col-xs-12 form_block">
+              <div class="form-group">
+            <label>SPOC Email</label>
+           <span class="data_mode"> <input type="text" class="form-control" placeholder="Enter Email ID"></span>
+          </div>
+          
+           <div class="form-group">
+            <label>Date</label>
+            <div class="input-group date"> <div class="input-group-addon"> <i class="fa fa-calendar"></i> </div>
+               <span class="data_mode"> <input type="text" class="form-control pull-right" id="datepicker1" placeholder="Enter Policy Expiry Date"></span>
+          </div></div>
+            </div>
+            
+            <div class="col-md-3 col-sm-6 col-xs-12 form_block">
+              <div class="form-group">
+            <label>SPOC Mobile</label>
+            <span class="data_mode"><input type="text" class="form-control" placeholder="Enter Mobile No."></span>
+          </div>
+          
+           <div class="form-group">
+            <label>&nbsp;</label>
+                 <div class="checkbox">
+                    <label>
+                    <input type="checkbox" class="flat-red" >
+                     Towing Required
+                    </label>
+                  </div>
+          </div>
+            </div>
+       
+       
+      
+   
+       
+            
+            <div class="col-md-3 col-sm-6 col-xs-12 form_block">
+             <div class="form-group">
+            <label>Garage Phone</label>
+              <span class="data_mode"> <input type="text" class="form-control" placeholder="Enter Garage Phone"></span>
+          </div>
+             <div class="form-group">
+             <label>&nbsp;</label>
+               <p style=" text-align: center;">
+                <a href="javascript:void(0);" class="btn btn-primary submit_nw_btn" role="button">Save</a>
+                <a href="javascript:void(0);" class="btn btn-default submit_nw_btn" role="button">Cancel</a>
+            </p>
+             </div></div>
+            
+       
+      </div>
+        </div>
+          </div>
+          
+          
+          
+          <div class="box box-default">
+    <div class="box-header with-border">
+          <h3 class="box-title">Surveyor Details</h3>
+          <div class="box-tools">
+        <i class="fa fa-phone-square call_icon" aria-hidden="true"></i>
+        <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+       
+      </div>
+        </div>
+    <!-- /.box-header -->
+    <div class="box-body">
+    <p class="help-block">Surveyor Id - <span>SRV1341</span></p>
+          <div class="row">
+        <div class="col-md-3 col-sm-6 col-xs-12 form_block">
+              <div class="form-group">
+            <label>Surveyor Name</label>
+           <span class="data_mode"> <input type="text" class="form-control" placeholder="Enter Name"></span>
+          </div>
+           <div class="form-group">
+           
+                 <div class="checkbox">
+                
+                    <label>
+                    <input type="checkbox" class="flat-red" >
+                    Investigator Required
+                    </label>
+                  </div>
+          </div>
+                       </div>
+        <div class="col-md-3 col-sm-6 col-xs-12 form_block">
+              <div class="form-group">
+            <label>Surveyor Email</label>
+            <span class="data_mode"><input type="text" class="form-control" placeholder="Enter Email ID"></span>
+          </div>
+             </div>
+            
+            <div class="col-md-3 col-sm-6 col-xs-12 form_block">
+              <div class="form-group">
+            <label>Surveyor Mobile</label>
+           <span class="data_mode"> <input type="text" class="form-control" placeholder="Enter Mobile No"></span>
+          </div>
+          
+          
+            </div>
+       
+       
+      
+   
+       
+            
+            <div class="col-md-3 col-sm-6 col-xs-12 form_block">
+             <div class="form-group">
+            <label>Garage Phone</label>
+           <span class="data_mode"> <input type="text" class="form-control" placeholder="Enter Phone No"></span>
+          </div>
+             <div class="form-group">
+            
+               <p style=" text-align: center;">
+                <a href="javascript:void(0);" class="btn btn-primary submit_nw_btn" role="button">Save</a>
+                <a href="javascript:void(0);" class="btn btn-default submit_nw_btn" role="button">Cancel</a>
+            </p>
+             </div></div>
+            
+       
+      </div>
+        </div>
+          </div>
+          
+          
+          <div class="box box-default">
+    <div class="box-header with-border">
+          <h3 class="box-title">Documents</h3>
+          <div class="box-tools">
+        <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+       
+      </div>
+        </div>
+    <!-- /.box-header -->
+    <div class="box-body">
+              <table class="table table-bordered">
+                <tr>
+                     <th>Document</th>
+                  <th>Uploaded On</th>
+                  <th> FileName</th>
+                 
+                </tr>
+                <tr>
+                  <td>Driving License</td>
+                  <td>12/7/2017</td>
+                   <td>In id est non lectus suscipit fringilla</td>
+                 </tr>
+                 
+                       <tr>
+                  <td>Registration Certificate</td>
+                  <td>22/7/2017</td>
+                   <td>Vestibulum sit amet felis a dolor </td>
+                 </tr>
+                 
+                 
+                       <tr>
+                  <td>Insurance Policy</td>
+                   <td>18/7/2017</td>
+                   <td>Sed pulvinar libero eu magna</td>
+                 </tr>
+                 
+                       <tr>
+                  <td>Claim Form</td>
+                  <td>15/7/2017</td>
+                   <td>Donec rutrum eros feugiat </td>
+                 </tr>
+                  <tr>
+                  <td>Job Card</td>
+                  <td>7/7/2017</td>
+                  <td>Donec rutrum eros feugiat </td>
+                 </tr>
+                 
+                 <tr>
+                  <td><select class="form-control">
+                    <option>option 1</option>
+                    <option>option 2</option>
+                    <option>option 3</option>
+                    <option>option 4</option>
+                    <option>option 5</option>
+                  </select></td>
+                  <td><select class="form-control">
+                    <option>option 1</option>
+                    <option>option 2</option>
+                    <option>option 3</option>
+                    <option>option 4</option>
+                    <option>option 5</option>
+                  </select></td>
+                  <td valign="middle"><input type="file" id="uploadfile"></td>
+                 </tr>
+               
+              </table>
+            </div>
+          </div>
+          
+          
+          
+          <div class="box box-default">
+    <div class="box-header with-border">
+          <h3 class="box-title">Payment Details</h3>
+          <div class="box-tools">
+        <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i></button>
+       
+      </div>
+        </div>
+    <!-- /.box-header -->
+    <div class="box-body">
+    <p class="help-block">Surveyor Id - <span>SRV1341</span></p>
+          <div class="row">
+        <div class="col-md-3 col-sm-6 col-xs-12 form_block">
+              <div class="form-group">
+            <label>Initial Estimate</label>
+           <span class="data_mode"> <input type="text" class="form-control" placeholder="Enter Initial Estimate"></span>
+          </div>
+           <div class="form-group">
+           
+                 <div class="checkbox">
+                
+                    <label>
+                      <input type="checkbox" class="flat-red" >
+                    Payment Confirmed
+                    </label>
+                  </div>
+          </div>
+                       </div>
+        <div class="col-md-3 col-sm-6 col-xs-12 form_block">
+              <div class="form-group">
+            <label>Final Estimate</label>
+            <span class="data_mode"><input type="text" class="form-control" placeholder="Enter Final Estimate"></span>
+          </div>
+             </div>
+            
+            <div class="col-md-3 col-sm-6 col-xs-12 form_block">
+              <div class="form-group">
+            <label>Customer Share</label>
+           <span class="data_mode"> <input type="text" class="form-control" placeholder="Enter Customer Share"></span>
+          </div>
+          
+          
+            </div>
+       
+       
+      
+   
+       
+            
+            <div class="col-md-3 col-sm-6 col-xs-12 form_block">
+             <div class="form-group">
+            <label>Payment Mode</label>
+         <span class="data_mode">  <select id="PaymentMode" class="form-control">
+          <option value="NetBanking">NetBanking</option>
+          <option value="Cash">Cash</option>
+          <option value="Credit Card">Credit Card</option>
+          <option value="Debit Card">Debit Card</option>
+          <option value="Wallet">Wallet</option>
+          <option value="Other">Other</option>
+        </select></span>
+          </div>
+             <div class="form-group">
+            
+               <p style=" text-align: center;">
+                <a href="javascript:void(0);" class="btn btn-primary submit_nw_btn" role="button">Update</a>
+                
+            </p>
+             </div></div>
+            
+       
+      </div>
+        </div>
+          </div>
+          
+          
+          
+    
+    </div>
+    
+    <div class="col-md-3 col-md-6 col-xs-12">
+    <div class="floating_block">
+    
+    <div class="box box-primary">
+            <div class="box-header with-border">
+              <h3 class="box-title">Callback</h3>
+            </div>
+            <div class="box-body">
+            <div class="form-group">
+                  <!--<label>Callback To</label>-->
+                  <span class="data_mode"><select class="form-control select2" style="width: 100%;">
+                <option>Select Callback</option>
+                <option >Customer</option> 
+                <option >Garage</option> 
+                <option >Surveyor</option> 
+               <option >Insurer</option> 
+                </select></span>
+                </div>
+           <div class="form-group">
+             <div class="input-group date form_datetime"data-date-format="dd MM yyyy - HH:ii p" data-link-field="dtp_input1">
+                    <input class="form-control" size="16" type="text" value="" readonly>
+                    <span class="input-group-addon"><span class="glyphicon glyphicon-remove"></span></span>
+					<span class="input-group-addon"><span class="glyphicon glyphicon-th"></span></span>
+                </div>
+                </div>
+                
+            <a href="javascript:void(0);" class="btn btn-primary btn-block"><b>Set Callback</b></a>
+            </div>
+           
+            </div>
+    
+   <div class="box box-primary">
+            <div class="box-header with-border">
+              <h3 class="box-title">Status Log</h3>
+            </div>
+            <div class="box-body">
+           <div class="form-group">
+                <!--  <label>Status</label>-->
+                 <span class="data_mode"> <select class="form-control select2" style="width: 100%;">
+                <option>Select Status</option>
+                <option >New</option> 
+                </select></span>
+                </div>
+                <div class="form-group">
+                 <!-- <label>Substatus</label>-->
+                  <span class="data_mode"><select class="form-control select2" style="width: 100%;">
+                <option>Select Substatus</option>
+                <option>New</option> 
+                </select></span>
+                </div>
+            <a href="javascript:void(0);" class="btn btn-primary btn-block"><b>Update Status</b></a>
+            </div>
+           
+            </div>
+            
+            
+            <div class="box box-primary">
+            <div class="box-header with-border">
+              <h3 class="box-title">Comment Log</h3>
+            </div>
+            <div class="box-body">
+          <div class="form-group">
+                 <!-- <label>Comment</label>-->
+                  <textarea class="form-control" rows="3" placeholder="Enter Comment"></textarea>
+                </div>
+               
+            <a href="javascript:void(0);" class="btn btn-primary btn-block"><b>Add Comment</b></a>
+            </div>
+           
+            </div>
+            </div>
+    </div>      
+          
+          </div>
+		  </section>
+      
+      <div class="control-sidebar-bg"></div>
+    </div>
+</div>
+</body>
+</html>

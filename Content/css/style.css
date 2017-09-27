@@ -1,0 +1,46 @@
+@charset "utf-8";
+/* CSS Document */
+
+.small_block{width: 20%;}
+.dataTables_length{ display:none;}
+.blue_bg{ background-color: #3c8dbc !important;}
+.table_header{position: absolute;top: 6px;}
+.filter_block{ width:22%; float: left;margin: 0 10px 0 0;}
+.submit_button{width: auto; margin: 0;}
+.table_hd{ position:absolute !important;}
+.data_block{ height:auto;}
+.navbar-custom-menu{    margin: 0 15px 0 0;}
+.navbar-custom-menu>.navbar-nav>li>.dropdown-menu{ width:200px !important;}
+.pull-right{text-align: left;display: block;width:100%;}
+.pull-right a i{ margin:0 0 0 0;}
+.radio_button{position:relative; display: inline; margin-top: 10px; margin-bottom:10px; margin:0 30px 0 0;}
+.radio_button label{ font-weight:normal;}
+.radio_button input[type=radio]{margin: 0; margin-top:0; line-height: normal; vertical-align: middle;}
+.radio_btn{ margin:0 10px 0 0;}
+.topfilter_block{ margin-bottom:0;line-height: 46px;}
+.input_block{ margin-bottom:0;margin: 6px 0 0 0;}
+.submit_nw_btn{/*padding: 6px 19px;*/margin: 0 4px 0 0; padding:6px 22px;}
+.select_data{text-align: center;border-top: none;padding-top: 0;}
+.register_block{ position: relative; margin: 11px 0 0 0;text-align: center;}
+.or_text{ font-size: 18px;position: absolute;left: 46%;top: -28%; background: #ececec;border-radius: 100%;padding: 7px 10px;}
+.register_button{ margin:20px 0 10px 0;}
+.data_search{ margin-bottom:30px;}
+.pull-right-data{text-align: left;float: right;}
+.customer_data{padding-left: 0;margin-bottom: 0;}
+.customer_data>.list-group-item{position: relative;display: block;padding: 6px 15px;margin-bottom: -1px;background-color: #fff;border: 1px solid #ddd; border-left: 1px solid #ddd !important; border-right:1px solid #ddd !important;  padding-left:7px !important; padding-right:7px !important;}
+.data_block{ padding:0 !important;}
+.checkbox>label{padding-left:0 !important;}
+.checkbox>label>div.icheckbox_flat-green{ margin-right: 7px;}
+.garage_blockright{display: inline-block; float: right;}
+.garage_block{ display:inline-block;}
+.call_icon{ font-size:19px !important;position: absolute; right: 30px; top: 6px; color:#00a65a !important; cursor:pointer;}
+.dashboard_table{ padding:15px!important;}
+.filter_blocknew {width:29%;float: left;margin: 0 10px 0 0;}
+.button_sec{ width: 10%;display: inline-block;text-align: center; margin: 10px 0;}
+.submit_block{text-align: center;}
+.floating_block{position:fixed; width:22%;}
+.customer_viewsearch{float: right;width: auto; margin: 10px 0;}
+.filter_txt{text-align: left;padding: 0 8px 0 0;font-weight: 600;}
+.data_mode{display: block;}
+
+
